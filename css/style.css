@@ -1,0 +1,299 @@
+/*font and color ruls for headings and body*/
+h1, h2, h3 {
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 600;
+    margin: 3px;
+    padding: 1px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    background-color: #b7a57a;
+    color: black;
+    font-size: 1.2rem;
+}
+
+/*container styling*/
+.topic, .post {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    border: 2px solid white;
+    background-color: #2a9d8f;
+    padding: .5rem;
+}
+
+.post a {
+    color: white;
+    text-decoration: underline;
+}
+
+.inside span {
+    margin-inline-start: 0px;
+}
+
+/*list rules*/
+ol li {
+    font-weight: bold;
+}
+
+li span {
+    font-weight: normal;
+    padding-left: .2rem;
+}
+
+button {
+    border: none;
+    font-size: 1.5rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/*image rules*/
+img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 15px;
+}
+
+figure {
+    margin-inline-start: 0px;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.gif {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+#cutie {
+    display: inline;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+/*footer and citation rules*/
+.small {
+    margin: 0px;
+    padding: 0px;
+    font-size: .8rem;
+}
+
+.footer {
+    margin: 1rem;
+    font-size: .7rem;
+}
+
+.footer p {
+    margin: .1rem;
+}
+
+.footer span {
+    padding: 1px;
+}
+
+cite {
+    text-decoration: underline;
+}
+
+/*header rules*/
+.header {
+    color: white;
+    background-color: #4b2e83;
+    border: 2px solid white;
+    margin: 1rem;
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/*nav bar rules*/
+nav {
+    background-color: #f4a261;
+    padding: .3rem 0;
+    margin: 1rem;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-right: .5em;
+}
+
+/*collapse rules*/
+#spoilers, .result1, .result2, .result3 {
+    display: none;
+}
+
+#mainspoilers, #quiz1results, #quiz2results, #quiz3results {
+    background-color: #f4a261;
+    text-decoration: underline;
+}
+
+/*quiz rules*/
+#quiz1results, #quiz2results, #quiz3results {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    text-transform: uppercase;
+}
+
+.result1, .result2, .result3 {
+    text-align: center;
+}
+
+.question1, .question2, .question3 {
+    display: flex;
+}
+
+.choice1, .choice2, .choice3 {
+    width: 10em;
+    height: 8em;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    font-size: 1rem;
+}
+
+.choice1 {
+    background-color: #e76f51;
+}
+
+.choice2 {
+    background-color: #f9dc5c;
+}
+
+.choice3 {
+    background-color: #3185fc;
+}
+
+/*small screen rules*/
+@media (min-width: 598px)
+{
+    /*image rules*/
+    .gif {
+        max-height: 400px;
+        max-width: 400px;
+    }
+
+    img {
+        max-height: 250px;
+        max-width: 250px;
+    }
+
+    /*alignment rules*/
+    .header {
+        display: block;
+    }
+
+    li span {
+        padding-left: .5rem;
+    }
+    
+    /*font size rules*/
+    .choice1, .choice2, .choice3 {
+        font-size: 1.3rem;
+    }
+}
+
+/*medium screen rules*/
+@media (min-width: 768px)
+{
+    /*alignment rules*/
+    nav {
+        justify-content: flex-start;
+    }
+
+    .inside { 
+        display: flex;
+        align-items: center;
+    }
+    
+    h1, h2, h3, .header, #quiz1, #quiz2, #quiz3, .result1, .result2, .result3 {
+        text-align: start;
+    }
+    
+    .choice1, .choice2, .choice3 {
+        margin-left: 1.5rem;
+    }
+
+    /*color and size rules*/
+    .post a, cite {
+        color: black;
+        text-decoration: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    body, nav li a {
+        font-size: 1.4rem;
+    }
+
+    /*hover rules*/
+    nav li a:hover, button:hover, cite:hover, .post a:hover {
+        color: white;
+        text-decoration: underline;
+        transition: all .25s ease-out;
+    }
+}
+
+/*large screen rules*/
+@media (min-width: 992px)
+{
+    /*image size rules*/
+    .gif {
+        max-height: 500px;
+        max-width: 500px;
+    }
+
+    img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+}
